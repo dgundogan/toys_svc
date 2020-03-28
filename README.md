@@ -17,6 +17,8 @@ docker-compose run app sh -c "python manage.py  startapp core"
 
 docker-compose run app sh -c "python manage.py makemigrations"
 
+docker-compose run app sh -c "python manage.py migrate"
+
 ### Test & Lint
 docker-compose run --rm app sh -c "python manage.py test && flake8"
 
